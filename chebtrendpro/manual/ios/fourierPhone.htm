@@ -1,0 +1,164 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>FourierPredictor manual (iPad)</title>
+<STYLE type="text/css">
+p {margin: 20px; font-family: Arial;}
+li {margin: 20px; font-family: Arial;}
+</STYLE>
+</head>
+
+<body topmargin="0" leftmargin="20">
+<br><br>
+<p face="Courier" size=+2>
+<h3>FourierPredictor v.1.x.x Manual (iPad)</h3> 
+<hr>
+
+<br>
+After the app has been started, it enters into Groups selection screen:<br><br>
+<img border="1" src="fourier/iPhoneMain.png"><br><br>
+User can add new group there by pressing <img border="0" src="button_add_up.png"> button or edit group by pressing <b>Edit</b> button (Delete only command is available to the moment) or enter into existing group by pressing one of Groups buttons.<br><br>
+<u>Bottom toolbar:</u><br> 
+- <img border="0" src="export.png"> - exports groups' content to .csv files, one file per group to apps' shared Documents directory. Files are accessible via iTunes. File format is described in <a href = #appendix1>Appendix #1</a><br>
+- <img border="0" src="import.png"> - imports groups' content from all .csv files in apps' shared Documents directory. Directory is accessible via iTunes. File format is described in <a href = #appendix1>Appendix #1</a><br>
+- <b>i</b> icon allows access to that manual.<br><br>
+Inside group user gets acces to symbols (i.e. indicies, currency pairs, other financial instruments):<br><br>
+<img border="1" src="fourier/iPhoneSymbols.png"><br><br>
+He can add new symbols (<img border="0" src="button_add_up.png"> button) by search in Yahoo finance listed symbols. Yahoo driven suggest system allows to search not only by symbol's name but by it's description substring also.<br>
+Pressing to <img border="0" src="zap.png"> button leads to scan group and provide most close movement prediction:<br>
+<img border="1" src="fourier/iPhoneSymbols1.png"><br><br>
+Bottom toolbar contains <b>D/W/M/I</b> selector. It allows to select Daily/Weekly/Monthly/Intraday datafeeds.<br>
+Intraday datafeeds quantity can be changed in Settings screen as described futher.<br>
+Chart's settings are available from the next, <b>Charts</b>, screen.<br><br>^M<br>
+Data feed's & chart's settings are available from the next, <b>Charts</b>, screen.<br><br>
+
+Pressing on some symbol in Symbols panel leads to <b>Charts</b> panel:<br><br>
+<table border="0" cellspacing="0" cellpadding="5">
+<tr>
+<td><img border="1" src="fourier/iPhoneChartPortrait1.png"></td><td><img border="1" src="fourier/iPhoneChartPortrait2_1.png"></td>
+</tr>
+</table>
+<br>
+Double tap on Charts screen switchs view to compressed chart allowing to see more data!<br>
+<br>
+<b>Top panel:</b><br><br>
+Date on the top panel button shows the last user selected date.<!--Under it effective date i.e. last date available for chart and it's ohlc data are shown.--><br>
+That button pressing leads to calendar where user can select some old date. It's suitable for backtesting or some period of interest exploration.<br>
+When some old date is selected, <img border="0" src="btnFwd.png"> player button is shown on the left down side of the chart. It's backtest player. When the button is pressed, the next date chart is drawn. That is suitable for dynamic chart exploration.<br> 
+- <img border="0" src="button_edt_up.png"> - shows dialog to add/edit symbol's comment;<br>
+- <img border="0" src="button_draw_up.png"> - turns to line draw mode:<img border="0" src="button_draw_dn.png"><br><br>
+
+User can draw lines by fingers in that mode. Two new buttons should appear in the right bottom corner of the device under the bottom toolbar:<br>
+- <img border="0" src="clearButton.png"> - erase lines mode toggle;<br>
+- <img border="0" src="color.png"> - lines color button;<br>
+Press line draw mode button again to save your line & leave draw mode.<br>
+
+<br>Radio group under chart allows to add to chart one of classic indicators: MA - upto 6 various MA lines; BB - Bollinger bands; SAR; FBB - <a href="http://www.marketvolume.com/technicalanalysis/bollingerfibonacci.asp">Fibonacci Bollinger Bands</a>. In these versions it's available for free.); Price Channel.<br>
+Check <a href = #appendix2>Appendix #2</a> for the full current indicators'/oscillatrs' list.<br><br>
+There are some new buttons on the bottom toolbar:<br>
+- <b>D</b>aily/<b>W</b>eekly/<b>M</b>onthly/<b>I</b>ntraday (Intraday quantity is available via the first <b>Settings</b> menu) time frames selection. Attention to Google Edition users: as soon as it fully oriented on intraday bars the selector looks like <img border="0" src="minutes.png"> Abbreviations mean 1, 5, 15, 30 minutes <br>
+- <img border="0" src="candles.png"> - to turn charts to candles view from ohlc view and it's changed to <img border="0" src="ohlc.png"> if so.<br>
+- <img border="0" src="2chart.png"> - allows to turn charts from indicators selection mode to oscillators selection mode.<br><br>
+In that mode indicators radiogroup is changed to oscillators radiogroup and 2-charts bottom panel button is changed to 1-chart mode selection button.<br>
+Curretly available oscillators are: MACD, Volume+Chaikin, BB%B, Slow Stochastic, RSI, CCI, ADX, MFI, Standard Deviation, Fast Stochastic, EliotW, QQE.<br>
+- <img border="0" src="refresh.png"> - Refresh button allows to refresh data and redraw charts.<br> 
+- <img border="0" src="planet.png"> - Market Scanner web app link (beta version);<br>
+<!--
+There are some changes in chart interface in intraday mode:<br><br>
+<img border="0" src="intraday.png"><br><br>
+- "Set date" button s replaced with two buttons for scrolling along the chart;<br>
+- in the left bottom corner of main chart text "Yahoo" or "Google" is shown. It indicates from what source data are. For NASDAQ & NYSE executed symbols and for Bombay Stock Exchange, National Stock Exchange of India, Shanghai Stock Exchange, Shenzhen Stock Exchange listed symbols Google provides realtime data feeds against Yahoo 15-20 minutes delayed.<br>
+- horisontal scale is changed to days (d), hours (h), minutes based.<br><br>
+-->
+- <img border="0" src="gear2.png"> - indicators settings. By pressing it user will enter into Settings screen. It allows to tune MA, Bollinger Bands, Parabolic SAR, MACD, etc. indicators & oscillators:<br><br>
+<table border="0" cellspacing="0" cellpadding="5">
+<tr>
+<td><img border="1" src="fourier/iPhoneSettings.png"></td>
+<td><img border="1" src="fourier/iPhoneCustomSignal.png"></td>
+</tr>
+</table>
+<br>
+New <b>Custom signal</b> feature is currently provided as beta.<br>
+It's idea to provide some sort of custom signal, user can design visually from some classical components. To the moment it's 2 MA cross & RSI & MFI levels possibly.<br>
+When user sets up the custom signal, no additional lines will be shown on the chart, only blue signal triangles if signal occurs.<br>
+This allows to add any lines to the chart separatelly.<br>
+MA settings for the cross are separated but RSI & MFI settings are taken from the app's "Settings" screen.<br>
+<br>
+<p>
+<b>About BB%B oscillator:</b><br>
+Thanks TayJT who offered to implement it. He provided the formula as it was developed by Tradestation members:<br>
+BB%B = 100 * ( Price - LowerBand ) / ( UpperBand - LowerBand ) ; <br>
+Ken Burkhalter modified it to scale chart from 100/0/-100:<br> 
+BB%B = 100 * ((Price-LowBand) - (HighBand - LowBand)/2) / ((HighBand-LowBand)/2);
+This would more clearly show the deviation of a price from mean value.<br>
+</p>
+<p>More info about <b>Fibonacci Bollinger Bands</b> there: 
+<a href="http://www.marketvolume.com/technicalanalysis/bollingerfibonacci.asp">Fibonacci Bollinger Bands</a><br></p>
+<p><b>Good luck!</b></p>
+<hr>
+<p><a href='http://itunes.com/apps/igor-vlasov'><b>More apps</b></a></p>
+<hr>
+<p><a name = appendix1><u>Appendix1: Import/Export file format.</u></a><br><br>
+The Import/Export file is regular text csv file without header. File name = Group name.<br>
+Fields are delimited with '~' character.<br><br>
+Fields list:
+<ol>
+<li>Symbol's abbreviation in Yahoo Finance format. Examples: AAPL, ^NYA. The only mandatory field!</li>
+<li>Symbol's name. If absent, assumed equal to abbreviation.</li>
+<li>Exchange's abbreviation in Yahoo Finance format. Example: ASE for American Stock Exchange.</li>
+<li>Amount of data for Kalman Curve. Default 100.</li>
+<li>Smooth Factor. Default 20.</li>
+<li>Supersignal polynom order. Default 4.</li>
+<li>Supersignal standard deviation. Default 2.</li>
+<li>Bollinger Bands MA type. Default EMA</li>
+<li>Bollinger Bands period. Default 5</li>
+<li>Bollinger Bands standard deviation. Default 2</li>
+<li>Symbol's comment, if any.</li>
+</ol>
+</p>
+<p>If you plan to provide only the first one, two or three fields, complete string with ~ character.</p>
+<hr>
+<p><a name = appendix2><u>Appendix2: Full indicators' list.</u></a><br><br>
+Top panel indicators:
+<ul>
+<li> up to 6 MA (SMA, EMA, WMA, DEMA, TEMA, TRIMA). MA's amount, type & period are defined in the Settings.</li>
+<li>BB - Bollinger Bands</li>
+<li>FBB - Fibonacci Bollinger Bands</li>
+<li>PrceCh - Price Channel</li>
+<li>XEliot - Elliott X-waves</li>
+</ul>
+<p>Bottom panel indicators/oscillators:
+<ul>
+<li>MACD</li>
+<li>Chaikin - Volume + ADOSC</li>
+<li>BB%B line</li>
+<li>BB%B histogram</li>
+<li>Slow Stochastic</li>
+<li>RSI</li>
+<li>CCI</li>
+<li>ADX</li>
+<li>MFI</li>
+<li>StdDev</li>
+<li>Fast Stochastic</li>
+<li>EliotW - Elliot Waves/li>
+<li>QQE</li>
+<li>Williams %R</li>
+</ul>
+<p>From the Settings the next indicators are available:
+<ul>
+<li>Supersignal;</li>
+<li>Fibonacci Retracements</li>
+<li><a name = ewo>Elliott Wave Oscillator</a></li>
+<img src="ElliottWaveOscillator.png"><br>
+<a href="http://www.dailyfx.com/forex/education/trading_tips/daily_trading_lesson/2012/12/05/Learn_Forex_Using_the_Elliot_Wave_Oscillator_to_Predict_Forex_Moves.html">Good Article About</a>
+<li><a name = qqe>QQE indicator</a></li>
+<img src="qqe.png"><br>
+<a href="http://www.cmsfx.com/en/trading-software/vt-trader/vt-trader-features/many-technical-indicators/qqe/">Good Article About</a>
+</ul>
+</p>
+<hr>
+<p><a href='../../../index.html'><b>More apps</b></a></p>
+<hr>
+</body>
+</html>

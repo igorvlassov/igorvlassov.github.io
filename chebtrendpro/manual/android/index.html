@@ -1,0 +1,177 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>ChebyshevTrendPro manual (iPhone)</title>
+<STYLE type="text/css">
+p {margin: 20px; font-family: Arial;}
+li {margin: 20px; font-family: Arial;}
+</STYLE>
+</head>
+
+<body topmargin="10" leftmargin="10">
+<h3>ChebyshevTrendPro v.2.x.x Manual (Android)</h3> 
+<hr>
+<p face="Courier" size=+2>
+
+<p>
+After the app has been started, it enters into Groups selection screen:<br><br>
+<img border="1" src="groups.png"><br><br>
+User can add new group there by pressing <b>+</b> button or delete group by pressing <b>-</b> button (new form will be appear) Or user can enter into existing group by pressing one of Groups buttons.<br>
+<b>i</b> icon provides access to that manual.<br><br>
+Inside group user gets acces to symbols (i.e. indicies, currency pairs, other financial instruments):<br><br>
+<img border="1" src="indicies.png"><br><br>
+He can add new symbols (<b>+</b> button) by search in Yahoo finance listed symbols. Yahoo driven suggest system (Google driven for Google Edition users) allows to search not only by symbol's name but by it's description substring also.<br>
+- <img src='bolt.png'> - By pressing bolt button user starts data retrieving & recent signals' counting against the current group. After process completion up green or down red arrows should appear left to symbols dending on signal's direction and cell note says on what bar event occurs.<br>
+<br>
+<a href = #ssignal>Supersignal</a> users: if last signal is <a href = #ssignal>supersignal</a> arrow is replaced by double arrow.<br>
+Data feed's & trend's settings are available from the next, <b>Charts</b>, screen.<br><br>
+
+Pressing on some symbol in Symbols panel leads to <b>Charts</b> panel:<br><br>
+<img border="1" src="chart1.png">
+<br>
+<br>
+Red and green triangles show signal direction. 
+<br>
+Pinch gesture allows to change the chart scale.<br>
+<br>
+<b>Top panel:</b><br>
+<!--Under it effective date i.e. last date available for chart and it's ohlc data are shown.--><br>
+ It's suitable for backtesting or some period of interest exploration.<br>
+- <img border="0" src="note.png"> - shows dialog to add/edit symbol's comment;<br>
+- <img border="0" src="draw.png"> - turns to line draw mode:<img border="0" src="draw_on.png"><br><br>
+- Time frames could be changed via menu:<br><br>
+<img border="1" src="menu.png">
+<br><br>
+<b> <img border="1" src="draw.png"> Line draw mode</b><br>
+
+<br>User can draw lines by fingers in that mode.<br>
+Press line draw mode button again to save your line & leave draw mode.<br>
+
+<br>Button under chart allows to add to chart one of classic indicators: MA - upto 6 various MA lines; BB - Bollinger bands; SAR; FBB - <a href="http://www.marketvolume.com/technicalanalysis/bollingerfibonacci.asp">Fibonacci Bollinger Bands</a>; Price Channel.<br>
+And another button allows to select one of oscillators like MACD, Volume+Chaikin, BB%B, Slow and Fast Stochastic, RSI, CCI, ADX and more<br>
+Check <a href = #appendix2>Appendix #2</a> for the full current indicators'/oscillatrs' list.<br><br>
+There are some other buttons on the bottom toolbar:<br>
+- <img border="0" src="eye.png"> - after user set cursor on some date and press <b>eye</b> button, selected date becomes new effective (i.e. last)<br> 
+- <img border="0" src="globe.png"> - Market Scanner web app link;<br>
+<!--
+There are some changes in chart interface in intraday mode:<br><br>
+<img border="0" src="intraday.png"><br><br>
+- "Set date" button s replaced with two buttons for scrolling along the chart;<br>
+- in the left bottom corner of main chart text "Yahoo" or "Google" is shown. It indicates from what source data are. For NASDAQ & NYSE executed symbols and for Bombay Stock Exchange, National Stock Exchange of India, Shanghai Stock Exchange, Shenzhen Stock Exchange listed symbols Google provides realtime data feeds against Yahoo 15-20 minutes delayed.<br>
+- horisontal scale is changed to days (d), hours (h), minutes based.<br><br>
+-->
+- <img border="0" src="gear.png"> - indicators settings. By pressing it user will enter into the Settings screen. It allows to tune indicators' settings<br><br>
+<!--
+<table border="0" cellspacing="0" cellpadding="5">
+<tr>
+<td><img border="1" src="settings3.png"></td>
+</tr>
+<tr>
+<td><img border="1" src="custom.png"></td>
+</tr>
+</table>
+/-->
+<br>
+<b>Chebyshev Trend indicator parameters description:</b><br><br>
+Chebyshev trend line is polynom of some order (2 for stright line and more), it's created using a modified Gaussian least squares fit on
+certain amount of data (60-200 in the app). The higher polynom order lead to more accurate polynom line.
+Lower polynom order lead to more common trend line, 2 for simple line trend for ex.
+Amount of data = time frames count taken in account in calculation. The longer it, the more past datas used for polynom calculation.<br>
+<br>
+<b>Some trading ideas</b><br><br>
+As I said earlier Chebyshev trend line is polynom of some order, it's created using a modified Gaussian least squares fit on certain amount
+of data. It's counted & redrawn when new data is available to fit best. So trend line data can be changed in the past &
+signals are re-counted too.<br>
+I think, it's not fully correct to generate signals based on the trend line, it's mostly for trend visualisation. But many people asked me
+about signals & I made it. <br>
+I think, there are 2 methods of trade could be:<br>
+<p>
+<ol>
+<li>Signal was in the past & trend line shows almost constant direction. You can open trade & set stop near opposite s/r line.</li>
+<li>Signal is now. You can try to open trade &  set initial stop-loss as close as possible to signal and ajust it if trend really moves
+according to signal.</li>
+</ol>
+<p>
+<a name = ssignal><b>SuperSignal is developed at last!</b></a>
+<br><br>
+A lot of us searched how to improve the app signals quality but most succesfull inventor is Alon Hadar!<br>
+And there is a method description as he explains it:<br>
+the key is to use only the signals that are paralleled to price touching lower order channels<br>
+in the direction of the channels trend only<br>
+long = channels are up + price near channel's bottom + chebyshev signal buy<br>
+short = channels are heading down + price near channel's upper line + chebychev signal sell<br><br>
+Put attantion that there are 2 variables for the channel that can change ther results - the most important is the polynom order - default is 4 
+but in some cases the 3/5/6 show better results. The trader should "play" with the channel order to find the channel 
+that is most reliable meaning that price touch the bands and reverse as much as possible.<br>
+The second variable is the standard deviation which default is 2 like bollinger
+but in some cases when the security is very volatile you can increase the s.d. to get better results.<br>
+<br>The last tip is:<br>
+Traders should trade only the signals that are in the direction of the last signal in the higher frame meaning - <br>
+ if in weekly frame last signal is long they should take all long signals on daily frame and avoid all short signals;<br>
+ if in weekly frame last signal is short they should take all short signals on daily frame and avoid all long signals.<br><br>
+
+Also Marcello Djunaidy offers to use Supersignal as an envelope for overbought/oversold indication: buy when below envelope, sell when above envelope<br>
+ </p>
+<p>
+<b>About BB%B oscillator:</b><br>
+Thanks TayJT who offered to implement it. He provided the formula as it was developed by Tradestation members:<br>
+BB%B = 100 * ( Price - LowerBand ) / ( UpperBand - LowerBand ) ; <br>
+Ken Burkhalter modified it to scale chart from 100/0/-100:<br> 
+BB%B = 100 * ((Price-LowBand) - (HighBand - LowBand)/2) / ((HighBand-LowBand)/2);
+This would more clearly show the deviation of a price from mean value.<br>
+</p>
+<p>More info about <b>Fibonacci Bollinger Bands</b> there: 
+<a href="http://www.marketvolume.com/technicalanalysis/bollingerfibonacci.asp">Fibonacci Bollinger Bands</a><br></p>
+<p><b>Good luck!</b></p>
+<hr>
+<p><a href='http://chebscan.com/chebtrendpro/'><b>More apps</b></a></p>
+<hr>
+<p><a name = appendix2><u>Appendix2: Full indicators' list.</u></a><br>
+<br>
+Top panel indicators:
+<ul>
+<li> up to 6 MA (SMA, EMA, WMA, DEMA, TEMA, TRIMA). MA's amount, type & period are defined in the Settings.</li>
+<li>BB - Bollinger Bands</li>
+<li>FBB - Fibonacci Bollinger Bands</li>
+<li>PrceCh - Price Channel</li>
+<li>XEliot - Elliott X-waves</li>
+<li>AD</li>
+</ul>
+<p>Bottom panel indicators/oscillators:
+<ul>
+<li>MACD</li>
+<li>Chaikin - Volume + ADOSC</li>
+<li>BB%B</li>
+<li>Slow Stochastic</li>
+<li>RSI</li>
+<li>CCI</li>
+<li>ADX</li>
+<li>MFI</li>
+<li>StdDev</li>
+<li>Fast Stochastic</li>
+<li>EliotW - Elliot Waves/li>
+<li>QQE</li>
+<li>Williams %R</li>
+</ul>
+<p>From the Settings the next indicators are available:
+<ul>
+<li>Supersignal;</li>
+<li>Fibonacci Retracements</li>
+<li>SAR</li>
+</ul>
+<hr>
+<ul>
+<li><a name = ewo>Elliott Wave Oscillator</a></li>
+<img src="ElliottWaveOscillator.png"><br>
+<a href="http://www.dailyfx.com/forex/education/trading_tips/daily_trading_lesson/2012/12/05/Learn_Forex_Using_the_Elliot_Wave_Oscillator_to_Predict_Forex_Moves.html">Good Article About</a>
+<li><a name = qqe>QQE indicator</a></li>
+<img src="qqe.png"><br>
+<a href="http://www.cmsfx.com/en/trading-software/vt-trader/vt-trader-features/many-technical-indicators/qqe/">Good Article About</a>
+</ul>
+</p>
+<hr>
+<p><a href='../../../index.html'><b>More apps</b></a></p>
+<hr>
+</body>
+</html>

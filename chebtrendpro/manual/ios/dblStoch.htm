@@ -1,0 +1,29 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Double Stochastic Optimizer manual</title>
+<STYLE type="text/css">
+p {margin: 20px; font-family: Arial;}
+li {margin: 20px; font-family: Arial;}
+</STYLE>
+</head>
+
+<body topmargin="0" leftmargin="0">
+<h3>Double Stochastic Optimizer manual</h3> 
+
+<p face="Courier" size=+2>
+
+There is how it works:buy when indicator crosses bottom border to up and sell when indicator crosses top border to down<br><br>
+<img src="dblStoch.png"><br><br>
+Easy isn't it? <br>
+<br><b>But how we can make backtest optimization?</b><br><br>
+The goal of backtest optimization is to find top and bottom line values for highest profit.<br>
+We assumend that we have unlimited credit and we can buy 100 papers at any buy signal.<br>
+So open position can include more than 100 stocks but we can sell of course only if position opens.<br>
+At the end we have a couple of trades and their result:<br><br>
+<img src="backtest.png"><br><br>
+Then we compare results for different top and bottom border lines<br><br>
+Good Trading!
+</body>
+</html>

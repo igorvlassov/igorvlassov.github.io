@@ -1,0 +1,185 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MultiTrendPro manual for Mac</title>
+<STYLE type="text/css">
+p {margin: 20px; font-family: Arial;}
+li {margin: 20px; font-family: Arial;}
+</STYLE>
+</head>
+
+<body topmargin="0" leftmargin="20">
+<p face="Courier" size=+2>
+<hr>
+<h3>MultiTrendPro manual for Mac</h3>
+
+<hr>
+
+<br>
+<img border="0" src="groups.png"><br><br>
+User can add new group by pressing <b>+</b> button or delete group by pressing <b>-</b> button.<br>
+User can enter into existing group by pressing one of Groups buttons.<br>
+Inside group user gets access to symbols (i.e. indicies, currency pairs, other financial instruments).<br>
+He can add new FOREX pairs or symbols by search in Yahoo Finance or Google Finance listed symbols:<br><br>
+<img border="0" src="add_symbol.png"><br><br>
+Yahoo and Google driven suggest systems allow to search not only by symbol's name but by it's description substring also.<br>
+Yahoo listed symbol can be added directly without selection in suggest form.<br>
+Time frames available for symbols depend of data feed source:<br><br>
+<table border="1">
+<tr><th>Yahoo</th><th>Google</th><th>FXCM</th><th>Other FOREX</th></tr>
+<tr><td><img src="yahooTF1.png"></td><td><img src="googleTF1.png"></td><td><img src="fxcmTF1.png"></td><td><img src="forexTF1.png"></td></tr>
+</table>
+By pressing <img border="0" src="zip.png"> button user starts data retrieving & recent signals' counting against the current group.<br>
+After process completion up or down arrows should appear left to symbols depending on signal's direction.<br>
+<a href = #ssignal>Supersignal</a> users: if last signal is <a href = #ssignal>supersignal</a> arrow is replaced by double arrow.<br>
+Pressing on some symbol in Symbols panel opens <b>Charts</b> panel:<br><br>
+<img border="0" src="scan_yahooTF.png"><br><br>
+Red and green triangles show signal direction.<br> 
+Warning: depending of Chebyshev Trend curve's dynamic nature signals can disappear or change their direction when new data is arrived.<br>
+User can return to former signals on daily, weekly and monthly data feeds by last data changing at right top of the app.<br><br>
+<b>Bottom toolbar</b><br><br>
+Indicators' combo box allows to add to chart one of classic indicators: MA - upto 6 various MA lines; BB - Bollinger bands; SAR; FBB - <a href="http://www.marketvolume.com/technicalanalysis/bollingerfibonacci.asp">Fibonacci Bollinger Bands</a>; Price Channel; AD. Check <a href = #appendix1>Appendix #1</a> for the full current indicators'/oscillatrs' list.<br><br>
+
+Oscillators' combo box allows to add to chart one of the following oscillators: MACD, Volume+Chaikin, BB%B, Slow Stochastic, RSI, CCI, ADX, MFI, StdDev, StochF, EliotWaves, QQE, WilliamsR. Check <a href = #appendix1>Appendix #1</a> for the full current indicators'/oscillatrs' list.<br><br>
+
+- OHLC/Candles switch turns charts to candles view from ohlc view and vice versa.<br>
+- Crystal ball switch <img src="crystal-ball_s.jpg"> turns on/off Fourier prediction.<br><br>
+- Folder button allows to load external file for analizys. Check <a href = #appendix2>Appendix #2</a> for the external data file structure.<br><br>
+
+<b>Indicators settings:</b><br><br>
+<img border="0" src="settings.png"><br><br>
+Import/export buttons allow to import & export files with symbols. They are inherited from iPhone/iPad files and have allmost the same structure.<br>
+File format is described in <a href = #appendix3>Appendix #3</a><br><br>
+<b>Chebyshev Trend indicator parameters description:</b><br><br>
+Chebyshev trend line is polynom of some order (2 for stright line and more), it's created using a modified Gaussian least squares fit on
+certain amount of data (60-200 in the app). The higher polynom order lead to more accurate polynom line.
+Lower polynom order lead to more common trend line, 2 for simple line trend for ex.
+Amount of data = time frame taken in account in calculation. The longer it, the more past datas used for polynom calculation.<br>
+<br>
+<br>
+<b>Some trading ideas</b><br><br>
+As I said earlier Chebyshev trend line is polynom of some order, it's created using a modified Gaussian least squares fit on certain amount
+of data. It's counted & redrawn when new data is available to fit best. So trend line data can be changed in the past &
+signals are re-counted too.<br>
+I think, it's not fully correct to generate signals based on the trend line, it's mostly for trend visualisation. But many people asked me
+about signals & I made it. <br>
+I think, there are 2 methods of trade could be:<br>
+<p>
+<ol>
+<li>Signal was in the past & trend line shows almost constant direction. You can open trade & set stop near opposite s/r line.</li>
+<li>Signal is now. You can try to open trade &  set initial stop-loss as close as possible to signal and ajust it if trend really moves
+according to signal.</li>
+</ol>
+<p>
+<a name = ssignal><b>SuperSignal is developed at last!</b></a>
+<br><br>
+A lot of us searched how to improve the app signals quality but most succesfull inventor is Alon Hadar!<br>
+And there is a method description as he explains it:<br>
+the key is to use only the signals that are paralleled to price touching lower order channels<br>
+in the direction of the channels trend only<br>
+long = channels are up + price near channel's bottom + chebyshev signal buy<br>
+short = channels are heading down + price near channel's upper line + chebychev signal sell<br><br>
+<img border="0" src="supersignal.png"><br><br>
+Put attantion that there are 2 variables for the channel that can change ther results - the most important is the polynom order - default is 4 
+but in some cases the 3/5/6 show better results. The trader should "play" with the channel order to find the channel 
+that is most reliable meaning that price touch the bands and reverse as much as possible.<br>
+The second variable is the standard deviation which default is 2 like bollinger
+but in some cases when the security is very volatile you can increase the s.d. to get better results.<br>
+<br>The last tip is:<br>
+Traders should trade only the signals that are in the direction of the last signal in the higher frame meaning - <br>
+ if in weekly frame last signal is long they should take all long signals on daily frame and avoid all short signals;<br>
+ if in weekly frame last signal is short they should take all short signals on daily frame and avoid all long signals.<br><br>
+
+Also Marcello Djunaidy offers to use Supersignal as an envelope for overbought/oversold indication: buy when below envelope, sell when above envelope<br>
+ </p>
+<p>
+<b>About BB%B oscillator:</b><br>
+Thanks TayJT who offered to implement it. He provided the formula as it was developed by Tradestation members:<br>
+BB%B = 100 * ( Price - LowerBand ) / ( UpperBand - LowerBand ) ; <br>
+Ken Burkhalter modified it to scale chart from 100/0/-100:<br> 
+BB%B = 100 * ((Price-LowBand) - (HighBand - LowBand)/2) / ((HighBand-LowBand)/2);
+This would more clearly show the deviation of a price from mean value.<br>
+</p>
+<p>More info about <b>Fibonacci Bollinger Bands</b> there: 
+<a href="http://www.marketvolume.com/technicalanalysis/bollingerfibonacci.asp">Fibonacci Bollinger Bands</a><br></p>
+<p><b>Good luck!</b></p>
+<hr>
+<p><a href='http://chebscan.com/chebtrendpro'><b>More apps</b></a></p>
+<hr>
+<p><b>Candlesticks patterns</b><br><br>
+Currently availabe:
+<ul>
+<li>Three Line Strike (3LS)</li>
+<li>Evening Star (ES)</li>
+<li>Abandoned Baby (AB)</li>
+</ul>
+<p><a href='https://www.investopedia.com/articles/active-trading/092315/5-most-powerful-candlestick-patterns.asp'>More info...</a>
+<hr>
+<p><a name = appendix1><u>Appendix1: Full indicators' list.</u></a><br><br>
+Indicators:
+<ul>
+<li> up to 6 MA (SMA, EMA, WMA, DEMA, TEMA, TRIMA). MA's amount, type & period are defined in the Settings.</li>
+<li>BB - Bollinger Bands</li>
+<li>FBB - Fibonacci Bollinger Bands (available for free in ChebyshevTrendLite & FOREX ed.; available as tier 1 in-app purcase in other versions)</li>
+<li>PrceCh - Price Channel</li>
+<li>XEliot - Elliott X-waves</li>
+<li><a href='../chebtrendpro/manual/ichimoku'>Ichimoku</a></li>
+</ul>
+<p>Oscillators:
+<ul>
+<li>MACD</li>
+<li>Chaikin - Volume + ADOSC</li>
+<li>BB%B line</li>
+<li>BB%B histogram</li>
+<li>Slow Stochastic</li>
+<li>RSI</li>
+<li>CCI</li>
+<li>ADX</li>
+<li>MFI</li>
+<li>StdDev</li>
+<li>Fast Stochastic</li>
+<li><a href="http://www.dailyfx.com/forex/education/trading_tips/daily_trading_lesson/2012/12/05/Learn_Forex_Using_the_Elliot_Wave_Oscillator_to_Predict_Forex_Moves.html">EliotW - Elliot Waves</a></li>
+<li><a href="http://www.cmsfx.com/en/trading-software/vt-trader/vt-trader-features/many-technical-indicators/qqe/">QQE</a></li>
+<li>Williams %R</li>
+</ul>
+<p>From the Settings the following indicators are available:
+<ul>
+<li>Supersignal</li>
+<li>Parabolic SAR</li>
+<li>Volume Profile</li>
+</ul>
+</p>
+<p><a name = appendix2><u>Appendix2: External data file structure.</u></a><br><br>
+External data file is comma delimited csv file of the following structure:
+[time in seconds from midnigt of 01.01.1970],[open],[high],[low],[close],[volume]<br><br>
+for examle:<br>
+1456153200,12.99,13.0094,12.79,12.79,115916<br><br>
+</p>
+<p><a name = appendix3><u>Appendix3: Import/Export file format.</u></a><br><br>
+The Import/Export file is regular text csv file without header. File name = Group name.<br>
+Fields are delimited with '~' character.<br><br>
+Fields list:
+<ol>
+<li>Symbol's abbreviation in data feed's format (default is Yahoo Financedata feed). Examples: AAPL, ^NYA. The only mandatory field!</li>
+<li>Symbol's name. If absent, assumed equal to abbreviation.</li>
+<li>Exchange's abbreviation in data feed's format. Example: NYQ - Yahoo Finance abbreviation for NYSE.</li>
+<li>Amount of data for Chebyshev polynom calculation. Default 100.</li>
+<li>Chebyshev polynom order. Default 10.</li>
+<li>Supersignal polynom order. Default 4.</li>
+<li>Supersignal standard deviation. Default 2.</li>
+<li>Bollinger Bands MA type. Not used </li>
+<li>Bollinger Bands period. Not used </li>
+<li>Bollinger Bands standard deviation. Not used </li>
+<li>Symbol's comment, if any.</li>
+<li>Data feed. Could be Yahoo, Google, FXCM, ForEx. Default is Yahoo</li>
+</ol>
+</p>
+<p>If you plan to provide only the first one, two or three fields, complete string with ~ character.</p>
+
+<hr>
+<p><a href='../../../index.html'><b>More apps</b></a></p>
+<hr>
+</body>
+</html>
+
